@@ -11,8 +11,6 @@ for line in lines:
             rowMax = rowMax - (((rowMax - rowMin) + 1)/2)
         elif line[i] == "B":
             rowMin += ((rowMax-rowMin) + 1)/2
-    if rowMin != rowMax:
-        print("Something went wrong with rows!")
     row = rowMin
     columnMin = 0
     columnMax = 7
@@ -21,8 +19,6 @@ for line in lines:
             columnMax = columnMax - (((columnMax - columnMin) + 1)/2)
         elif line[7+i] == "R":
             columnMin += ((columnMax-columnMin) + 1)/2
-    if columnMin != columnMax:
-        print("Something went wrong with columns!")
     column = columnMin
     seatIDs.append((row * 8) + column)
 
