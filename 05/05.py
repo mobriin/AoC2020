@@ -27,11 +27,11 @@ for line in lines:
     seatIDs.append((row * 8) + column)
 
 seatIDs.sort()
-print("Highest ID: " + str(seatIDs[-1]))
+print("Answer 1: " + str(seatIDs[-1]))
 
 for i in range(len(seatIDs)):
     if seatIDs[i] + 1 != seatIDs[i+1]:
-        print("My seat: " + str(seatIDs[i] + 1))
+        print("Answer 2: " + str(seatIDs[i] + 1))
         break
 
 
