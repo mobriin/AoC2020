@@ -1,4 +1,4 @@
-with open('input.txt') as fp:
+with open('input1.txt') as fp:
     lines = fp.readlines()
 
 splitInput = []
