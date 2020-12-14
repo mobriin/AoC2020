@@ -1,3 +1,5 @@
+import time
+start = time.time()
 with open('c:\\repos\\AoC2020\\14\\input.txt') as fp:
     lines = [line.rstrip().replace("mem[", "").replace("]", "").split(" = ") for line in fp]
 
@@ -48,4 +50,6 @@ for i, line in enumerate(lines):
                         addresses[j] += temp[i]
         for address in addresses:
             mem[int(address, 2)] = int(value)
+stop = time.time()
 print("Answer 2: " + str(sum(mem.values())))
+print(f"time {stop-start}")
